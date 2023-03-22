@@ -9,12 +9,14 @@ const Navbar = () => {
           <span className="text">HobbyJobby</span>
           <span className="dot">.</span>
         </div>
-        <div className="links"></div>
-        <span>Hobby Lobby Business</span>
-        <span>Explore</span>
-        <span>English</span>
-        <span>Sign In</span>
-        <span>Become a Seller</span>
+        <div className="links">
+          <span>Hobby Jobby Business</span>
+          <span>Explore</span>
+          <span>English</span>
+          <span>Sign In</span>
+          <span>Become a Seller</span>
+          <button>Join</button>
+        </div>
       </div>
     </div>
   );

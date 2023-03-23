@@ -10,7 +10,6 @@ const Slide = ({ children, slidesToShow, arrowsScroll }) => {
         <Slider slidesToShow={slidesToShow} arrowsScroll={arrowsScroll}>
           {children}
         </Slider>
-        );
       </div>
     </div>
   );

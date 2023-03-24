@@ -1,5 +1,6 @@
 import React from "react";
-import Slider from "infinite-react-carousel";
+import { Slider } from "infinite-react-carousel";
+import "./Gig.scss";
 
 const Gig = () => {
   return (
@@ -11,6 +12,7 @@ const Gig = () => {
 
           <div className="user">
             <img
+              className="pp"
               src="https://images.pexels.com/photos/720327/pexels-photo-720327.jpeg?auto=compress&cs=tinysrgb&w=1600"
               alt=""
             />
@@ -58,6 +60,7 @@ const Gig = () => {
             <h2>About The Seller</h2>
             <div className="user">
               <img
+                className="pp"
                 src="https://images.pexels.com/photos/720327/pexels-photo-720327.jpeg?auto=compress&cs=tinysrgb&w=1600"
                 alt=""
               />
@@ -113,6 +116,7 @@ const Gig = () => {
             <div className="item">
               <div className="user">
                 <img
+                  className="pp"
                   src="https://images.pexels.com/photos/839586/pexels-photo-839586.jpeg?auto=compress&cs=tinysrgb&w=1600"
                   alt=""
                 />
@@ -156,6 +160,51 @@ const Gig = () => {
             <div className="item">
               <div className="user">
                 <img
+                  className="pp"
+                  src="https://images.pexels.com/photos/839586/pexels-photo-839586.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                  alt=""
+                />
+                <div className="info">
+                  <span>Chad Rock</span>
+                  <div className="country">
+                    <img
+                      src="https://fiverr-dev-res.cloudinary.com/general_assets/flags/1f1fa-1f1f8.png"
+                      alt=""
+                    />
+                    <span>United States</span>
+                  </div>
+                </div>
+              </div>
+              <div className="stars">
+                <img src="/img/star.png" alt="" />
+                <img src="/img/star.png" alt="" />
+                <img src="/img/star.png" alt="" />
+                <img src="/img/star.png" alt="" />
+                <img src="/img/star.png" alt="" />
+                <span>5</span>
+              </div>
+              <p>
+                I just want to stay that art_with_ai was the first, and after
+                this level of work, the only artist I'll be using on HobbyJobby.
+                Communication was effortless, each day she sent me images that I
+                was to free to make requests for changes. She listened,
+                understood, and delievered way beyond my expectations. I
+                absolutely would recommend this gig and should know that I'll be
+                using them very soon!
+              </p>
+              <div className="helpful">
+                <span>Helpful?</span>
+                <img src="/img/like.png" alt="" />
+                <span>Yes</span>
+                <img src="/img/dislike.png" alt="" />
+                <span>No</span>
+              </div>
+            </div>
+            <hr />
+            <div className="item">
+              <div className="user">
+                <img
+                  className="pp"
                   src="https://images.pexels.com/photos/839586/pexels-photo-839586.jpeg?auto=compress&cs=tinysrgb&w=1600"
                   alt=""
                 />
@@ -199,49 +248,7 @@ const Gig = () => {
             <div className="item">
               <div className="user">
                 <img
-                  src="https://images.pexels.com/photos/839586/pexels-photo-839586.jpeg?auto=compress&cs=tinysrgb&w=1600"
-                  alt=""
-                />
-                <div className="info">
-                  <span>John Doe</span>
-                  <div className="country">
-                    <img
-                      src="https://fiverr-dev-res.cloudinary.com/general_assets/flags/1f1fa-1f1f8.png"
-                      alt=""
-                    />
-                    <span>United States</span>
-                  </div>
-                </div>
-              </div>
-              <div className="stars">
-                <img src="/img/star.png" alt="" />
-                <img src="/img/star.png" alt="" />
-                <img src="/img/star.png" alt="" />
-                <img src="/img/star.png" alt="" />
-                <img src="/img/star.png" alt="" />
-                <span>5</span>
-              </div>
-              <p>
-                I just want to stay that art_with_ai was the first, and after
-                this level of work, the only artist I'll be using on HobbyJobby.
-                Communication was effortless, each day she sent me images that I
-                was to free to make requests for changes. She listened,
-                understood, and delievered way beyond my expectations. I
-                absolutely would recommend this gig and should know that I'll be
-                using them very soon!
-              </p>
-              <div className="helpful">
-                <span>Helpful?</span>
-                <img src="/img/like.png" alt="" />
-                <span>Yes</span>
-                <img src="/img/dislike.png" alt="" />
-                <span>No</span>
-              </div>
-            </div>
-            <hr />
-            <div className="item">
-              <div className="user">
-                <img
+                  className="pp"
                   src="https://images.pexels.com/photos/839586/pexels-photo-839586.jpeg?auto=compress&cs=tinysrgb&w=1600"
                   alt=""
                 />
@@ -283,7 +290,46 @@ const Gig = () => {
             </div>
           </div>
         </div>
-        <div className="right"></div>
+        <div className="right">
+          <div className="price">
+            <h3>1 AI Generated Image</h3>
+            <h3>$59.99</h3>
+          </div>
+          <p>
+            Based on your description, I will create a unique high quality AI
+            generated image. <br></br>
+            <br></br>Tools Used: Microsoft Render 3D, AI Generation 3, Ayana 1.7
+          </p>
+          <div className="details">
+            <div className="item">
+              <img src="/img/clock.png" alt="" />
+              <span>2 Days Delivery</span>
+              <div className="item">
+                <img src="/img/recycle.png" alt="" />
+                <span>3 Revisions</span>
+              </div>
+            </div>
+            <div className="features">
+              <div className="item">
+                <img src="/img/greencheck.png" alt="" />
+                <span>Prompt Writing</span>
+              </div>
+              <div className="item">
+                <img src="/img/greencheck.png" alt="" />
+                <span>Prompt Writing</span>
+              </div>
+              <div className="item">
+                <img src="/img/greencheck.png" alt="" />
+                <span>Prompt Writing</span>
+              </div>
+              <div className="item">
+                <img src="/img/greencheck.png" alt="" />
+                <span>Prompt Writing</span>
+              </div>
+            </div>
+          </div>
+          <button>Continue</button>
+        </div>
       </div>
     </div>
   );

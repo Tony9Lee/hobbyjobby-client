@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./Catcard.scss";
+import "./CatCard.scss";
 
 const CatCard = ({ item }) => {
   return (

@@ -1,5 +1,6 @@
 import React from "react";
 import "./Messages.scss";
+import { Link } from "react-router-dom";
 
 const Messages = () => {
   const currentUser = {
@@ -8,109 +9,97 @@ const Messages = () => {
     isSeller: true,
   };
 
+  const message =
+    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, animi eaque, est officia blanditiis explicabo culpa, ut doloribus amet itaque quas excepturi non! Ratione, quam voluptate sed eaque tempore cupiditate.";
+
   return (
-    <div className="Messages">
+    <div className="messages">
       <div className="container">
         <div className="title">
           <h1>Messages</h1>
         </div>
         <table>
           <tr>
-            <th>Image</th>
-            <th>Title</th>
-            <th>Price</th>
-            <th>{currentUser?.isSeller ? "Buyer" : "Seller"}</th>
-            <th>Contact</th>
+            <th>Buyer</th>
+            <th>Last Message</th>
+            <th>Date</th>
+            <th>Action</th>
           </tr>
-          <tr>
+          <tr className="active">
+            <td>John Doe</td>
             <td>
-              <img
-                className="img"
-                src="https://images.pexels.com/photos/270408/pexels-photo-270408.jpeg?auto=compress&cs=tinysrgb&w=1600"
-                alt=""
-              />
+              <Link to="/message/1" className="link">
+                {message.substring(0, 100)}
+              </Link>
+              ...
             </td>
-            <td>Order1</td>
-            <td>88</td>
-            <td>123</td>
+            <td>1 Day Ago</td>
             <td>
-              <img className="message" src="/img/message.png" alt="" />
+              <button>Mark As Read</button>
             </td>
           </tr>
-          <tr>
+          <tr className="active">
+            <td>John Doe</td>
             <td>
-              <img
-                className="img"
-                src="https://images.pexels.com/photos/270408/pexels-photo-270408.jpeg?auto=compress&cs=tinysrgb&w=1600"
-                alt=""
-              />
+              <Link to="/message/1" className="link">
+                {message.substring(0, 100)}
+              </Link>
+              ...
             </td>
-            <td>Order1</td>
-            <td>88</td>
-            <td>123</td>
+            <td>1 Day Ago</td>
             <td>
-              <img className="message" src="/img/message.png" alt="" />
+              <button>Mark As Read</button>
             </td>
           </tr>
           <tr>
+            <td>John Doe</td>
             <td>
-              <img
-                className="img"
-                src="https://images.pexels.com/photos/270408/pexels-photo-270408.jpeg?auto=compress&cs=tinysrgb&w=1600"
-                alt=""
-              />
+              <Link to="/message/1" className="link">
+                {message.substring(0, 100)}
+              </Link>
+              ...
             </td>
-            <td>Order1</td>
-            <td>88</td>
-            <td>123</td>
-            <td>
-              <img className="message" src="/img/message.png" alt="" />
-            </td>
+            <td>1 Day Ago</td>
           </tr>
           <tr>
+            <td>John Doe</td>
             <td>
-              <img
-                className="img"
-                src="https://images.pexels.com/photos/270408/pexels-photo-270408.jpeg?auto=compress&cs=tinysrgb&w=1600"
-                alt=""
-              />
+              <Link to="/message/1" className="link">
+                {message.substring(0, 100)}
+              </Link>
+              ...
             </td>
-            <td>Order1</td>
-            <td>88</td>
-            <td>123</td>
-            <td>
-              <img className="message" src="/img/message.png" alt="" />
-            </td>
+            <td>1 Day Ago</td>
           </tr>
           <tr>
+            <td>John Doe</td>
             <td>
-              <img
-                className="img"
-                src="https://images.pexels.com/photos/270408/pexels-photo-270408.jpeg?auto=compress&cs=tinysrgb&w=1600"
-                alt=""
-              />
+              <Link to="/message/1" className="link">
+                {message.substring(0, 100)}
+              </Link>
+              ...
             </td>
-            <td>Order1</td>
-            <td>88</td>
-            <td>123</td>
-            <td>
-              <img className="message" src="/img/message.png" alt="" />
-            </td>
+            <td>1 Day Ago</td>
           </tr>
           <tr>
+            <td>John Doe</td>
             <td>
-              <img
-                className="img"
-                src="https://images.pexels.com/photos/270408/pexels-photo-270408.jpeg?auto=compress&cs=tinysrgb&w=1600"
-                alt=""
-              />
+              <Link to="/message/1" className="link">
+                {message.substring(0, 100)}
+              </Link>
+              ...
             </td>
-            <td>Order1</td>
-            <td>88</td>
-            <td>123</td>
+            <td>1 Day Ago</td>
+          </tr>
+          <tr>
+            <td>John Doe</td>
             <td>
-              <img className="message" src="/img/message.png" alt="" />
+              <Link to="/message/1" className="link">
+                {message.substring(0, 100)}
+              </Link>
+              ...
             </td>
+            <td>1 Day Ago</td>
           </tr>
         </table>
       </div>

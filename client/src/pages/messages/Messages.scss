@@ -9,15 +9,6 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-
-      button {
-        background-color: #1dbf73;
-        color: white;
-        font-weight: 500;
-        border: none;
-        padding: 10px;
-        cursor: pointer;
-      }
     }
     table {
       width: 100%;
@@ -27,18 +18,27 @@
           text-align: left;
         }
         td {
-          img {
-            width: 25px;
-            height: 25px;
-            object-fit: cover;
+          padding: 10px;
+
+          &:first-child {
+            font-weight: 500;
           }
-          .delete {
-            width: 20px;
-            cursor: pointer;
+          &:nth-child(2),
+          &:nth-child(3) {
+            color: gray;
           }
         }
 
-        &:nth-child(even) {
+        button {
+          background-color: #1dbf73;
+          color: white;
+          font-weight: 500;
+          border: none;
+          padding: 10px;
+          cursor: pointer;
+        }
+
+        &.active {
           background-color: #1dbf730f;
         }
       }

@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { gigs } from "../../data";
+import GigCard from "../../components/gigCard/GigCard";
 import "./Gigs.scss";
 
 const Gigs = () => {
@@ -13,7 +15,7 @@ const Gigs = () => {
   return (
     <div className="gigs">
       <div className="container">
-        <span className="breadcrumbs">HOBBYJOBBY > GRAPHICS & DESIGN ></span>
+        <span className="breadcrumbs">HOBBYJOBBY | GRAPHICS & DESIGN </span>
         <h1>AI Artists</h1>
         <p>
           Explore the boundaries of art and technology with HobbyJobby's AI
@@ -42,6 +44,11 @@ const Gigs = () => {
               </div>
             )}
           </div>
+        </div>
+        <div className="cards">
+          {gigs.map((gig) => (
+            <GigCard key={gig.id} item={gig} />
+          ))}
         </div>
       </div>
     </div>

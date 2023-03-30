@@ -1,14 +1,26 @@
 import React from "react";
 import { Slider } from "infinite-react-carousel";
+import { useParams } from "react-router-dom";
+import { useQuery } from "@tanstack/react-query";
 import "./Gig.scss";
 
-const Gig = () => {
+function Gig() {
+  const { id } = useParams();
+
+  const { isLoading, error, data, refetch } = useQuery({
+    queryKey: ["gigs"],
+    queryFn: () =>
+      newRequest.get(`/gigs/single/${id}`).then((res) => {
+        return res.data;
+      }),
+  });
+
   return (
     <div className="gig">
       <div className="container">
         <div className="left">
           <span className="breadCrumbs">HOBBY LOBBY | GRAPHICS & DESIGN</span>
-          <h1>I will create AI generated art for you</h1>
+          <h1>{data.title}</h1>
 
           <div className="user">
             <img
@@ -27,35 +39,12 @@ const Gig = () => {
             </div>
           </div>
           <Slider slidesToShow={1} arrowsScroll={1} className="slider">
-            <img
-              src="https://images.pexels.com/photos/1074535/pexels-photo-1074535.jpeg?auto=compress&cs=tinysrgb&w=1600"
-              alt=""
-            />
-            <img
-              src="https://images.pexels.com/photos/1462935/pexels-photo-1462935.jpeg?auto=compress&cs=tinysrgb&w=1600"
-              alt=""
-            />
-            <img
-              src="https://images.pexels.com/photos/1054777/pexels-photo-1054777.jpeg?auto=compress&cs=tinysrgb&w=1600"
-              alt=""
-            />
+            {data.images.map((img) => (
+              <img key={img} src={img} alt="" />
+            ))}
           </Slider>
           <h2>About This Gig</h2>
-          <p>
-            I use an AI program to create images based on text prompts. This
-            means I can help you to create a vision you have through a textual
-            description of your scene without requiring any reference images.
-            Some things I've found it often excels at are: Character portraits
-            (E.g. a picture to go with your DnD character) Landscapes (E.g.
-            wallpapers, illustrations to compliment a story) Logos (E.g. Esports
-            team, business, profile picture) You can be as vague or as
-            descriptive as you want. Being more vague will allow the AI to be
-            more creative which can sometimes result in some amazing images. You
-            can also be incredibly precise if you have a clear image of what you
-            want in mind. All of the images I create are original and will be
-            found nowhere else. If you have any questions you're more than
-            welcome to send me a message.
-          </p>
+          <p>{data.desc}</p>
           <div className="seller">
             <h2>About The Seller</h2>
             <div className="user">
@@ -292,14 +281,10 @@ const Gig = () => {
         </div>
         <div className="right">
           <div className="price">
-            <h3>1 AI Generated Image</h3>
-            <h3>$59.99</h3>
+            <h3>{data.shortTitle}</h3>
+            <h3>$ {data.price}</h3>
           </div>
-          <p>
-            Based on your description, I will create a unique high quality AI
-            generated image. <br></br>
-            <br></br>Tools Used: Microsoft Render 3D, AI Generation 3, Ayana 1.7
-          </p>
+          <p>{data.shortDesc}</p>
           <div className="details">
             <div className="item">
               <img src="/img/clock.png" alt="" />
@@ -333,6 +318,6 @@ const Gig = () => {
       </div>
     </div>
   );
-};
+}
 
 export default Gig;

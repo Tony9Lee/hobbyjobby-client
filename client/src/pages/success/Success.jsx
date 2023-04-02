@@ -3,7 +3,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import newRequest from "../../utils/newRequest";
 
 const Success = () => {
-  const { search } = useLocation(); // useLocation hook to be used to
+  const { search } = useLocation(); // To represent the current URL of the page and desstructuring to extract search property form the returned object
   const navigate = useNavigate(); //To be redirected after order is updated using useNavigate hook
   const params = new URLSearchParams(search);
   const payment_intent = params.get("payment_intent");

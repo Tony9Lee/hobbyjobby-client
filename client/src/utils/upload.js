@@ -6,12 +6,15 @@ const upload = async (file) => {
   data.append("upload_preset", "hobbyjobby");
 
   try {
-    const res = await axios.post(import.meta.env.VITE_UPLOAD_LINK, data);
-
+    const res = await axios.post(
+      "https://api.cloudinary.com/v1_1/dzjauw0ki/image/upload",
+      data
+    );
+    console.log({ res });
     const { url } = res.data;
     return url;
   } catch (err) {
-    console.log(err);
+    console.error(err);
   }
 };
 

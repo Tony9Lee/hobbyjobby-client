@@ -1,9 +1,4 @@
-import {
-  QueryClient,
-  useMutation,
-  useQuery,
-  useQueryClient,
-} from "@tanstack/react-query";
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import React from "react";
 import { Link, useParams } from "react-router-dom";
 import newRequest from "../../utils/newRequest";
@@ -28,7 +23,7 @@ const Message = () => {
       return newRequest.post(`/messages`, message);
     },
     onSuccess: () => {
-      QueryClient.invalidateQueries(["messages"]);
+      queryClient.invalidateQueries(["messages"]);
     },
   });
 
